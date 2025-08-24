@@ -1,0 +1,26 @@
+import React from 'react';
+import Hero from './components/Hero/Hero';
+import Navbar from './components/Navbar/Navbar';
+import About from './components/About/About';
+import Services from './components/Services/Services';
+import Mywork from './components/Mywork/Mywork';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <About/>
+      <Services/>
+      <Mywork/>
+      <Contact/>
+      <Footer/>
+    
+    </>
+  );
+}
+
+export default App;

@@ -1,0 +1,71 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+    animation: slideDown 0.9s ease-in-out;
+}
+
+/* Menu Items */
+.nav-manu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+
+.nav-manu li {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-manu li::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #DA7C25, #b923e1);
+    transition: width 0.4s ease;
+    border-radius: 50px;
+}
+
+.nav-manu li:hover {
+    color: #b923e1;
+    transform: translateY(-2px);
+}
+
+.nav-manu li:hover::after {
+    width: 100%;
+}
+
+/* Connect Button */
+.nav-connect {
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #b923e1);
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.5s ease;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.nav-connect:hover {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 10px 25px rgba(185, 35, 225, 0.4);
+    background: linear-gradient(267deg, #b923e1 0.36%, #DA7C25);
+}
+
+/* 🔥 Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}

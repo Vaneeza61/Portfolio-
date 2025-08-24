@@ -1,0 +1,228 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.about-title {
+    position: relative;
+    animation: slideDown 1s ease forwards;
+}
+
+.about-title:hover {
+    transform: scale(1.08) rotate(-1deg);
+    transition: transform 0.4s ease;
+}
+
+.about-left img {}
+
+.about-title h1 {
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+    animation: gradientText 3s ease infinite;
+}
+
+.about-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+.about-sections {
+    display: flex;
+    gap: 80px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    animation: slideRight 1.2s ease-in-out;
+}
+
+.about-para {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 24px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-skill {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-skill:hover {
+    transform: scale(1.08) translateX(10px);
+    box-shadow: 0 10px 20px rgba(180, 21, 255, 0.4);
+}
+
+.about-skill p {
+    min-width: 150px;
+    font-size: 24px;
+    font-weight: 500;
+    animation: fadeInLeft 1.2s ease;
+}
+
+.about-skill hr {
+    outline: none;
+    border: none;
+    width: 50%;
+    height: 8px;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+    animation: progressFill 2s ease forwards;
+}
+
+.about-achievements {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 80px;
+    animation: fadeInUp 1.3s ease;
+}
+
+.about-achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.about-achievement h1 {
+    font-size: 60px;
+    font-weight: 700;
+    background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 4s ease infinite;
+}
+
+.about-achievement p {
+    font-size: 22px;
+    font-weight: 500;
+    animation: fadeIn 1.4s ease-in-out;
+}
+
+.about-achievement:hover {
+    transform: scale(1.15) rotate(3deg);
+    box-shadow: 0 12px 30px rgba(223, 137, 8, 0.4);
+}
+
+/* 🔥 Animations Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes gradientText {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes progressFill {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 50%;
+    }
+}
